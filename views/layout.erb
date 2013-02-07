@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Moviez2</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href="/css_reset.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header id='top_nav'>
+      <nav>
+        <ul>
+          <li><a id='home_cow' href='/'><img src='/cow-icon-md.png' height="85%" /></a></li>
+          <li>
+            <h1>Online MOOvie DataBase</h1>
+          </li>
+          <li>
+            <form id='movie_search' action='/movie_search' method='post'>
+              <input type='text' name='title' autofocus>
+              <button>MOOO!</button>
+            </form>
+          </li>
+        </ul>
+
+      </nav>
+    </header>
+
+
+    <%= yield %>
+
+    <footer>
+      <span>&copy; Dylan O'Shea 2013</span>
+    </footer>
+  </body>
+</html>

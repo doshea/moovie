@@ -1,0 +1,41 @@
+<div id="main_container">
+  <section id='poster_side'>
+    <img id='poster' src="<%= @result['Poster'] %>">
+  </section>
+  <section id='text_side'>
+    <section>
+      <h1 id='title'><%= @result['Title'] %> (<%= @result['Year'] %>)</h1>
+      <div id='rated'>Rated: <%= @result['Rated'] %></div>
+      <div id='released'>Released: <%= @result['Released'] %></div>
+      <div id='runtime'>Run Time: <%= @result['Runtime'] %></div>
+      <div id='Genre'><%= @result['Genre'] %></div>
+    </section>
+    <section id='staff'>
+      <div id='director'>
+        Directed:<br />
+        <%= @result['Director'] %>
+      </div>
+      <div id='writer'>
+        Written:<br />
+        <%= @result['Writer'] %>
+      </div>
+      <div id='actors'>
+        Starring:<br />
+        <%= @result['Actors'] %>
+      </div>
+    </section>
+    <section>
+      <div id='plot'><%= @result['Plot'] %></div>
+      <!-- <div id='imdb_rating'><%= @result['imdbRating'] %></div> -->
+      <!-- <div id='imdb_votes'><%= @result['imdbVotes'] %></div> -->
+    </section>
+    <div id='rating_stamp'>
+      <img height="70px"src='<%= get_rating_img(@result['Rated']) %>'/>
+    </div>
+  </section>
+</div>
+
+
+
+
+
