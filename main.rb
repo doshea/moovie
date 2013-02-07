@@ -27,6 +27,11 @@ get '/movie_search' do
 end
 
 def get_rating_img(rating_string)
+  rating_string = 'Unrated' if (rating_string == 'N/A')
+  "/ratings/Templates/Rating_#{rating_string}.png"
+end
+
+def get_rating_img2(rating_string)
   suffix = case rating_string
   when 'G' then 'g_full'
   when 'NC-17' then 'nc_17_full'
@@ -44,8 +49,4 @@ def get_rating_img(rating_string)
   else 'unrated'
   end
   "/ratings/rated_#{suffix}.png"
-end
-
-def get_rating_img2(rating_string)
-  "/ratings/Templates/Rating_#{rating_string}.png"
 end

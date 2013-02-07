@@ -24,12 +24,14 @@
       </div>
     </section>
     <section>
-      <div id='plot'><%= @result['Plot'] %></div>
+      <div id='plot'>
+        <%= @result['Plot'] %>
+      </div>
       <!-- <div id='imdb_rating'><%= @result['imdbRating'] %></div> -->
       <!-- <div id='imdb_votes'><%= @result['imdbVotes'] %></div> -->
     </section>
     <div id='rating_stamp'>
-      <img height="70px"src='<%= get_rating_img2(@result['Rated']) %>'/>
+      <img height="70px"src='<%= get_rating_img(@result['Rated']) %>'/>
     </div>
   </section>
 </div>
