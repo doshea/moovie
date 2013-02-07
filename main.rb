@@ -45,3 +45,7 @@ def get_rating_img(rating_string)
   end
   "/ratings/rated_#{suffix}.png"
 end
+
+def get_rating_img2(rating_string)
+  "/ratings/Templates/Rating_#{rating_string}.png"
+end
